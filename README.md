@@ -51,8 +51,7 @@ O código já está preparado para receber as seguintes variáveis do nó anteri
 
   * **Jean Krause (Dev Jean)**
   * **Site**: [devjean.com.br](https://devjean.com.br/)
-  * **GitHub**: [@jeankrausejean](https://www.google.com/search?q=https://github.com/jeankrausejean)
-
+  * **GitHub**: [@jeankrausejean](https://github.com/jeankrausejean)
 ## 📄 Licença
 
 Este projeto é distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes. Sinta-se à vontade para usar, modificar e distribuir.
