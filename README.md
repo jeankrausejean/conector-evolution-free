@@ -6,7 +6,7 @@ Este pequeno projeto é uma forma de contribuir para a comunidade que usa a Evol
 
 **Desenvolvido por [Dev Jean](https://devjean.com.br/)**
 
-![Texto alternativo](source/conector_evolution_free.jpg)
+![Conector Free](source/conector_evolution_free.jpg)
 
 ## ✨ Funcionalidades
 
@@ -25,7 +25,7 @@ Este pequeno projeto é uma forma de contribuir para a comunidade que usa a Evol
 
 ## 🚀 Como Usar
 
-![Texto alternativo](conector_evolution_free_conectado.jpg)
+![Conector Free](source/conector_evolution_free_conectado.jpg)
 
 Este conector é um único arquivo HTML, o que torna sua implementação extremamente simples. O caso de uso mais comum é através do **n8n**.
 
