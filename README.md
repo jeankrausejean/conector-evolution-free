@@ -30,7 +30,7 @@ Este pequeno projeto é uma forma de contribuir para a comunidade que usa a Evol
 Este conector é um único arquivo HTML, o que torna sua implementação extremamente simples. O caso de uso mais comum é através do **n8n**.
 
 1.  **Crie um Workflow no n8n**: Inicie um novo workflow e importe o conector, arquivo json na pasta Conector aqui do projeto.
-[Baixar conector_devjean.json](conector/conector_devjean.json)
+[Baixar conector](conector/conector_devjean.json)
 2.  **Defina as Variáveis**: No nó Personalização, defina as variáveis necessárias para a conexão com a sua API e para a personalização da interface.
 3.  **Salve"**: Salve, copie a URL de produção do Webhook e cole no seu navegador ou insira no seu Chatwoot como um App de Dashboard.
 
