@@ -6,6 +6,8 @@ Este pequeno projeto é uma forma de contribuir para a comunidade que usa a Evol
 
 **Desenvolvido por [Dev Jean](https://devjean.com.br/)**
 
+![Texto alternativo](source/conector_evolution_free.jpg)
+
 ## ✨ Funcionalidades
 
   * **Conexão via QR Code**: Gera e exibe o QR Code para conectar uma nova instância do WhatsApp.
@@ -23,11 +25,13 @@ Este pequeno projeto é uma forma de contribuir para a comunidade que usa a Evol
 
 ## 🚀 Como Usar
 
+![Texto alternativo](conector_evolution_free_conectado.jpg)
+
 Este conector é um único arquivo HTML, o que torna sua implementação extremamente simples. O caso de uso mais comum é através do **n8n**.
 
-1.  **Crie um Workflow no n8n**: Inicie um novo workflow que irá fornecer os dados para o conector.
-2.  **Defina as Variáveis**: Em um nó anterior (como um "Set" ou "Function"), defina as variáveis necessárias para a conexão com a sua API e para a personalização da interface.
-3.  **Use o Nó "HTML"**: Adicione o nó "HTML" do n8n (disponível na comunidade ou como um nó "Code" configurado para retornar HTML) e cole o conteúdo do arquivo `conector.html` nele.
+1.  **Crie um Workflow no n8n**: Inicie um novo workflow e importe o conector, arquivo json na pasta Conector aqui do projeto.
+2.  **Defina as Variáveis**: No nó Personalização, defina as variáveis necessárias para a conexão com a sua API e para a personalização da interface.
+3.  **Salve"**: Salve, copie a URL de produção do Webhook e cole no seu navegador ou insira no seu Chatwoot como um App de Dashboard.
 
 O código já está preparado para receber as seguintes variáveis do nó anterior do n8n:
 
