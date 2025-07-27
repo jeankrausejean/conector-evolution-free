@@ -31,29 +31,62 @@ Se você precisa de recursos avançados, como gerenciamento de comportamento de 
 
 -----
 
-## 🚀 Guia Rápido de Instalação (n8n)
+## 🚀 Guia de Instalação
 
-A implementação do conector é extremamente simples, pois consiste em um único arquivo HTML. O método mais prático é através de um workflow no n8n.
+Você pode instalar o conector de duas formas, dependendo da sua necessidade.
+
+### Opção 1: Instalação com n8n (Recomendado)
+
+Este método é o mais prático, pois utiliza um workflow pronto para servir o conector como uma página web, facilitando a personalização através de um formulário. O arquivo necessário está na pasta `conector para n8n`.
 
 1.  **Download do Workflow**: Baixe o arquivo de workflow pronto para uso [clicando aqui](https://www.google.com/search?q=Conector/conector_devjean.json).
 2.  **Importe no n8n**: Em seu painel do n8n, vá em `New` \> `Import from file...` e selecione o arquivo `.json` que você baixou.
 3.  **Personalize as Variáveis**: No workflow importado, abra o nó **"Personalização"** e preencha os campos com os dados da sua API e os links para seus logos.
 4.  **Ative e Acesse**: Salve e ative o workflow. Copie a URL de produção do Webhook e cole no seu navegador. Você também pode inseri-la no seu Chatwoot como um App de Dashboard.
 
-![Conector Free](source/conector_evolution_free_conectado.jpg)
+#### Tabela de Variáveis (nó "Personalização")
 
-#### Tabela de Variáveis
+| Variável | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `urlApi` | A URL base da sua instância da Evolution API. | `https://api.meudominio.com` |
+| `apikey` | A `globalApiKey` da sua instância da Evolution API. | `SuaChaveSuperSecreta` |
+| `logo_light` | URL para a imagem do seu logo no modo claro. | `https://site.com/logo-claro.svg` |
+| `alt_tex_light` | Texto alternativo para o logo no modo claro. | `Logo da Minha Empresa` |
+| `logo_dark` | URL para a imagem do seu logo no modo escuro. | `https://site.com/logo-escuro.svg` |
+| `alt_text_dark` | Texto alternativo para o logo no modo escuro. | `Logo da Minha Empresa` |
 
-O conector é personalizado através das seguintes variáveis no nó "Personalização":
+-----
 
-| Variável              | Descrição                                         | Exemplo                        |
-| --------------------- | --------------------------------------------------- | ------------------------------ |
-| `urlApi`              | A URL base da sua instância da Evolution API.       | `https://api.meudominio.com`   |
-| `apikey`              | A `globalApiKey` da sua instância da Evolution API. | `SuaChaveSuperSecreta`         |
-| `logo_light`          | URL para a imagem do seu logo no modo claro.        | `https://site.com/logo-claro.svg` |
-| `alt_tex_light`       | Texto alternativo para o logo no modo claro.        | `Logo da Minha Empresa`        |
-| `logo_dark`           | URL para a imagem do seu logo no modo escuro.       | `https://site.com/logo-escuro.svg`|
-| `alt_text_dark`       | Texto alternativo para o logo no modo escuro.       | `Logo da Minha Empresa`        |
+### Opção 2: Instalação em Hospedagem (VPS, Compartilhada, etc.)
+
+Este método é ideal para quem deseja hospedar o arquivo HTML diretamente em um servidor web. O arquivo necessário está na pasta `conector para hospedagem`.
+
+1.  **Faça o Upload**: Envie o arquivo `index.html` da pasta `conector para hospedagem` para o seu servidor.
+
+2.  **Edite o Arquivo**: Abra o arquivo `index.html` em um editor de texto e modifique as seguintes linhas para configurar suas informações:
+
+      * **Linhas 53 e 54**: Altere os links (`src`) para os seus logos (claro e escuro) e o texto alternativo (`alt`).
+
+        ```html
+        <img id="logo-light" class="h-8 w-auto" src="URL_DO_SEU_LOGO_CLARO" alt="TEXTO_ALTERNATIVO">
+        <img id="logo-dark" class="h-8 w-auto hidden" src="URL_DO_SEU_LOGO_ESCURO" alt="TEXTO_ALTERNATIVO">
+        ```
+
+      * **Linha 205**: Informe a URL base da sua Evolution API.
+
+        ```javascript
+        // Linha 205
+        const evolutionUrl = 'SUA_EVOLUTION_BASE_URL'; 
+        ```
+
+      * **Linha 206**: Informe a sua Chave de API Global (`globalApiKey`).
+
+        ```javascript
+        // Linha 206
+        const apiKey = 'SUA_GLOBAL_API_KEY';
+        ```
+
+
 
 ## 🛠️ Tecnologias Utilizadas
 
